@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install doxygen
         run: sudo apt-get install -y doxygen
+      - name: Install gnuradio 
+        run: sudo apt-get install -y gnuradio
       - name: Configure CMake
         run: cmake -B ${{github.workspace}}/build -DBUILD_DOC=ON
       - name: Build doxygen docs
